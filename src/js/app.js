@@ -1,0 +1,15 @@
+// You can write a call and import your functions in this file.
+//
+// This file will be compiled into app.js and will not be minified.
+// Feel free with using ES6 here.
+
+import dotsGeneration from './modules/dots_generation';
+import blocksGeneration from './modules/blocks_generation';
+
+(($) => {
+  // When DOM is ready
+  $(() => {
+    dotsGeneration.dots();
+  });
+  blocksGeneration.blocks();
+})(jQuery);

@@ -1,0 +1,48 @@
+.task-10 {
+
+    $count: 200;
+
+    .container {
+        position: relative;
+        height: 600px;
+        width: 100%;
+        overflow: hidden;
+
+        .dot {
+            border-radius: 50%;
+            position: absolute;
+
+            @for $i from 1 through $count {
+                $size: random(300) * 0.05rem;
+
+                &:nth-child(#{$i}) {
+                    @include random-color;
+
+                    left: random(100) + 0vw;
+                    top: random(100) + 0vh;
+                    height: $size;
+                    width: $size;
+                    animation: move-#{$i} ease-in-out infinite;
+                    animation-duration: random(20)+ 0s;
+                }
+
+                @keyframes move-#{$i} {
+                    30% {
+                        left: random(100) + 0vw;
+                        top: random(100) + 0vh;
+                    }
+
+                    60% {
+                        left: random(100) + 0vw;
+                        top: random(100) + 0vh;
+                    }
+
+                    100% {
+                        left: random(100) + 0vw;
+                        top: random(100) + 0vh;
+                    }
+                }
+            }
+        }
+    }
+}

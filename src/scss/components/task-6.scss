@@ -1,0 +1,18 @@
+.task-6 {
+
+    .btn-2 {
+        @include btn-border-slide(#000000, #4400ff, true,  3px);
+
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    .btn {
+        @include btn-border-slide(#111111, #ff5100, false,  3px);
+
+        text-transform: uppercase;
+        text-decoration: none;
+        margin-left: 50px;
+    }
+
+}

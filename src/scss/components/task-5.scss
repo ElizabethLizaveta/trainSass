@@ -1,0 +1,24 @@
+.task-5 {
+
+    $count: 40;
+    
+    .container {
+        height: 400px;
+        width: 100%;
+    }
+
+    .inner-block {
+        height: 10px;
+        width: 100%;
+
+        @for $i from 1 through $count {
+              &:nth-child(#{$i}){
+                @include random-color;
+              }
+        }
+    }
+}
+
+
+  
+  

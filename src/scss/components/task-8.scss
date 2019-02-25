@@ -1,0 +1,49 @@
+.task-8 {
+   
+    .container {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        background:  #dfb3ff;
+        padding: 50px;
+    }
+
+    .cube {
+        width: 200px;
+        height: 200px;
+        transition: all 2s ease;
+        transform-style: preserve-3d;
+        transform-origin: 50% 50%;
+        transform: perspective(900px);
+
+        &:hover {
+            transform: perspective(900px) rotate3d(1,0,0,-90deg); 
+        }
+
+        .n-inner {
+            position: absolute;
+            display: block;
+            width: 200px;
+            height: 200px;
+            padding: 25px;
+        }
+
+        .n1 {
+            @extend .n-inner;
+
+            top: 0;
+            left: 0;
+            background-color:red;
+            transform: translate3d(0,0,100px); 
+        }
+
+        .n2 {
+            @extend .n-inner;
+
+            top: -100px;
+            left: 0;
+            background-color: purple;
+            transform: translate3d(0,0,0) rotate3d(1,0,0,90deg); 
+        }
+    }
+}
